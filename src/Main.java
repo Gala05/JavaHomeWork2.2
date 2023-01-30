@@ -2,14 +2,14 @@ public class Main {
     public static void main(String[] args) {
 
         int cash = 500; // количество денег на счету
-        int amount = 5001; // сумма пополнения
+        int amount = 5000; // сумма пополнения
         int bonus; // бонус за пополнение счета более, чем на 1000 рублей
-        if (amount >= 1000) {
+        if (amount > 1000) {
             bonus = amount / 100;
         } else {
             bonus = 0;
         }
-        int total = cash + bonus; //итоговая сумма
+        int total = cash + amount + bonus; //итоговая сумма
         System.out.println("За пополнение счета более чем на 1000 рублей, Вам будет начислено по 1 рублю за каждые " +
                 "полные 100 рублей пополнения.");
         System.out.println("Начислено бонусов:");
